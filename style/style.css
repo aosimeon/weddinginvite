@@ -1,0 +1,949 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Utility Styles */
+.close {
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* General Styles */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Header & Navigation */
+#main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5rem 0 1.5rem 0;
+  background: #fff;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+#main-header a {
+  display: block;
+  text-decoration: none;
+  color: #524261;
+  text-align: center;
+  margin: 0 2rem;
+}
+
+#main-header a.active {
+  color: #a899bf;
+}
+
+#main-header nav.main-nav {
+  width: 100%;
+}
+
+#main-header nav a {
+  transition: all 0.5s;
+  padding: 10px 0;
+}
+
+#main-header nav a:hover {
+  color: #a899bf;
+}
+
+#main-header nav ul {
+  display: grid;
+  justify-content: space-around;
+  align-content: center;
+  grid-gap: 3px;
+  grid-template-columns: repeat(6, 1.5fr);
+  list-style: none;
+  overflow: hidden;
+}
+
+#main-header .reg-btn {
+  font-weight: 100;
+  padding: 10px 10px;
+  border: 2px solid #7b6392;
+}
+
+#main-header .reg-btn:hover {
+  background: #efecf4;
+}
+
+#main-header .secondary-reg {
+  display: none;
+  width: 30%;
+  padding: 10px 5px;
+  margin: 0;
+}
+
+#main-header .icon-bar {
+  display: block;
+  margin: 5px 0;
+  width: 25px;
+  height: 3px;
+  background: #5f5c47;
+  border-radius: 5px;
+  transition: all 300ms;
+}
+
+#main-header .navbar-toggle {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 0.5rem;
+  border: none;
+  background: transparent;
+  border-radius: 5px;
+  padding: 2px 8px;
+  transition: all 500ms;
+  outline: none;
+}
+
+#main-header .close .icon-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: all 500ms;
+  transition-timing-function: ease-in-out;
+}
+
+#main-header .close .icon-bar:nth-child(2) {
+  opacity: 0;
+  transition: all 500ms;
+  transition-timing-function: ease-in-out;
+}
+
+#main-header .close .icon-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+  transition: all 500ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Showcase Section */
+main#showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-image: url("../img/background.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 120vh;
+  color: #fff;
+  text-align: center;
+}
+
+#showcase h1 {
+  font-family: "Tangerine", cursive;
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+#showcase h1:before,
+#showcase h1:after {
+  content: "";
+  display: inline-block;
+  width: 50%;
+  margin: 0 0.5em 0 -55%;
+  vertical-align: middle;
+  border-bottom: 1px solid;
+}
+#showcase h1:after {
+  margin: 0 -55% 0 0.5em;
+}
+#showcase h1 span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#showcase h2 {
+  margin: 0;
+  font-size: 5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+#showcase p {
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+#showcase a {
+  display: block;
+  color: #fff;
+  background: #7b6392;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  margin-top: 2rem;
+}
+
+#showcase a:hover {
+  background: #614e74;
+}
+
+/* Story Section */
+#story {
+  background: #ddf9fb;
+}
+
+#story #section-one {
+  font-family: "Tangerine", cursive;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  padding-top: 6rem;
+}
+
+#story #section-one h1 {
+  font-weight: 100;
+}
+
+#story .box-1,
+#story .box-2 {
+  width: 40%;
+  margin: 0;
+  padding: 0;
+}
+
+#story #section-two {
+  display: flex;
+  justify-content: space-around;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+#story #section-two img {
+  width: 100%;
+  height: auto;
+}
+
+#story #section-two h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+#story #section-two p {
+  font-size: 1.3rem;
+}
+
+#story #section-three {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#story #section-three img {
+  width: 25%;
+  height: 100%;
+}
+
+/* Wedding Section */
+
+#wedding {
+  background: #ddf9fb;
+  text-align: center;
+  padding-top: 6rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+#wedding p {
+  margin-bottom: 3rem;
+}
+
+#wedding a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 45px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  color: #fff;
+  background: #7b6392;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 0rem;
+  vertical-align: middle;
+}
+
+#wedding #section-one {
+  margin-bottom: 3rem;
+}
+
+#wedding #section-one h1 {
+  font-family: "Tangerine", cursive;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 100;
+}
+
+#wedding #section-two {
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/background2.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Party Section */
+#party {
+  text-align: center;
+}
+
+#party h1 {
+  font-family: "Tangerine", cursive;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 100;
+}
+
+#party h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+#party #section-one,
+#party #section-two {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+
+#party .bridesmaid img,
+#party .groomsmen img {
+  width: 100%;
+  border-radius: 2px;
+  padding: 0;
+  margin: 0;
+}
+#party #section-one {
+  background: #ddf9fb;
+  width: 100%;
+}
+
+#party .bridesmaid,
+#party .groomsmen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+#party .bridesmaid .box,
+#party .groomsmen .box {
+  width: 30%;
+  margin: 0;
+  padding: 0;
+}
+
+#party #section-two h1 {
+  margin-bottom: 3rem;
+}
+
+/* Details Section */
+#details {
+  text-align: center;
+  background: #ddf9fb;
+}
+
+#details a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 45px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  color: #fff;
+  background: #7b6392;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 0rem;
+  vertical-align: middle;
+  font-weight: 300;
+}
+
+#details h1 {
+  font-family: "Tangerine", cursive;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 100;
+}
+
+#details h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+#details #section-one,
+#details #section-two {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+#details #section-one p {
+  margin-bottom: 4rem;
+}
+
+#details #section-two {
+  background: #fff;
+}
+
+#details #section-two h1 {
+  margin-bottom: 2rem;
+}
+
+#details p {
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+#details #section-two p {
+  padding: 0 0rem;
+  padding-bottom: 1.5rem;
+}
+
+#details .registries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#details .registries img {
+  width: 30%;
+  height: 70%;
+}
+
+/* Register Section */
+#register {
+  background: #ddf9fb;
+  padding: 2rem 2rem 6rem 2rem;
+}
+
+#register .reg-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#register .main-section {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4rem;
+}
+
+#register h1 {
+  font-family: "Tangerine", cursive;
+  font-size: 3.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 100;
+  margin-bottom: 1.5rem;
+}
+
+#register h2 {
+  margin: 0;
+  font-weight: 300;
+  border-bottom: 1px solid #89739d;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+#register .back-btn {
+  border: none;
+  background: #ddf9fb;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+#register #section-one {
+  width: 65%;
+  font-weight: 300;
+}
+
+#register #section-two p {
+  padding-top: 1.4rem;
+  margin: 0;
+}
+
+#register #section-two {
+  font-weight: 300;
+  color: #fff;
+  width: 30%;
+  line-height: 1.6;
+}
+
+#register #section-two .content {
+  background: #7b6392;
+  padding: 2rem 1.5rem;
+  margin: 0 0.5rem;
+}
+
+#register .form-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+#register input[type="email"] {
+  width: 100%;
+  border: 1px solid #bdd4d6;
+  height: 8vh;
+  padding: 0 10px;
+  font-weight: 300;
+}
+
+#register input[type="text"] {
+  border: 1px solid #bdd4d6;
+  height: 8vh;
+  width: 100%;
+  padding: 0 10px;
+  font-weight: 300;
+}
+
+#register input[type="submit"] {
+  background: #7b6392;
+  color: #fff;
+  font-weight: 300;
+  width: 100%;
+  border: 1px solid #bdd4d6;
+  height: 8vh;
+  margin-top: 2rem;
+}
+
+#register .lastName {
+  width: 45%;
+}
+
+#register .firstName {
+  width: 45%;
+}
+
+label,
+input {
+  background: #ddf9fb;
+  display: block;
+  margin: 0.6rem 0;
+}
+/* Footer Section */
+
+footer {
+  padding: 1rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: #2e2e2e;
+  height: auto;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+footer div {
+  justify-self: end;
+}
+
+footer i {
+  padding: 0.4rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 950px) {
+  /* Header & Navigation */
+  #main-header nav ul {
+    grid-template-areas:
+      "link-one link-one link-two link-two link-three link-three"
+      "link-four link-four link-five link-five link-six link-six";
+  }
+
+  #main-header nav li.link-one {
+    grid-area: link-one;
+  }
+
+  #main-header nav li.link-two {
+    grid-area: link-two;
+  }
+
+  #main-header nav li.link-three {
+    grid-area: link-three;
+  }
+
+  #main-header nav li.link-four {
+    grid-area: link-four;
+  }
+
+  #main-header nav li.link-five {
+    grid-area: link-five;
+  }
+
+  #main-header nav li.link-six {
+    grid-area: link-six;
+  }
+
+  /* Showcase Section */
+  #showcase h1 {
+    font-size: 3.5rem;
+  }
+
+  #showcase h1:before,
+  #showcase h1:after {
+    width: 45%;
+  }
+
+  #showcase h2 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Showcase Section */
+  #showcase h1:before,
+  #showcase h1:after {
+    width: 40%;
+    margin: 0 0.2em 0 -55%;
+  }
+  #showcase h1:after {
+    margin: 0 -55% 0 0.2em;
+  }
+
+  #showcase h2 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Header & Navigation */
+  #main-header {
+    display: block;
+  }
+
+  #main-header .navbar-toggle {
+    display: block;
+    z-index: 4;
+  }
+
+  #main-header nav ul {
+    display: none;
+    position: fixed;
+    top: 50vh;
+    left: 50%;
+    margin-top: -50vh;
+    margin-left: -50%;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    padding: 5rem 0 5rem 0;
+    background: #ddf9fb;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  #main-header nav li:last-child {
+    display: none;
+  }
+
+  #main-header .secondary-reg {
+    display: block;
+  }
+
+  /* Showcase Section */
+  #showcase h1 {
+    font-size: 3rem;
+  }
+
+  #showcase h1:before,
+  #showcase h1:after {
+    width: 30%;
+  }
+
+  #showcase h2 {
+    font-size: 3rem;
+  }
+
+  /* Story Section */
+  #story #section-two {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #story .box-1,
+  #story .box-2 {
+    width: 85%;
+  }
+
+  /* Party Section */
+  #party .bridesmaid .box,
+  #party .groomsmen .box {
+    width: 45%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Details Section */
+  #details .registries img {
+    width: 51%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  #details .registries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  /* Footer Section */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  footer div,
+  footer small {
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  /* Header & Navigation */
+  #main-header nav ul {
+    display: grid !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /* Register Section */
+  #register .main-section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding-top: 5rem;
+  }
+
+  #register #section-one,
+  #register #section-two {
+    width: 100%;
+  }
+
+  #register #section-two {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /* Showcase Section */
+  #showcase h1 {
+    font-size: 2rem;
+  }
+
+  #showcase h1:before,
+  #showcase h1:after {
+    width: 30%;
+  }
+
+  #showcase h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Party Section */
+  #party .bridesmaid .box,
+  #party .groomsmen .box {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  /* Showcase Section */
+  #showcase h1 {
+    font-size: 1.5rem;
+  }
+
+  #showcase h1:before,
+  #showcase h1:after {
+    width: 25%;
+  }
+
+  #showcase h2 {
+    font-size: 1.5rem;
+  }
+
+  #showcase p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Story Section */
+  #story #section-three img {
+    width: 50%;
+    height: 100%;
+  }
+
+  #story #section-two {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  /* Story Section */
+  #story #section-three img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #story #section-one {
+    font-family: "Tangerine", cursive;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    padding-top: 6rem;
+  }
+
+  #story #section-one {
+    font-size: 1.5rem;
+  }
+
+  /* Wedding Section */
+  #wedding #section-two {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/background2.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+    width: 100%;
+    height: 50vh;
+  }
+
+  /* Party Section */
+  #party h1 {
+    font-size: 3rem;
+  }
+
+  /* Register Section */
+  #register .form-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+
+  #register .lastName {
+    width: 100%;
+  }
+
+  #register .firstName {
+    width: 100%;
+  }
+
+  #register input[type="email"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #bdd4d6;
+    height: 8vh;
+    padding: 0 10px;
+    outline: none;
+  }
+
+  #register input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #bdd4d6;
+    height: 8vh;
+    width: 100%;
+    padding: 0 10px;
+    outline: none;
+  }
+
+  #register h1 {
+    font-size: 2rem;
+    margin-bottom: 0rem;
+  }
+
+  #register h2 {
+    margin: 0;
+    font-weight: 300;
+    border-bottom: 1px solid #89739d;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  #register #section-two .content {
+    background: #ddf9fb;
+    padding: 0;
+    margin: 0 0.5rem;
+    color: #000;
+  }
+
+  #register h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  #register #section-two p {
+    padding-top: 0.5rem;
+  }
+
+  #register {
+    padding: 2rem 2rem 4rem 2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* Wedding Section */
+  #wedding #section-one {
+    margin: 0.5rem 0.5rem 2rem 0.5rem;
+  }
+
+  #wedding #section-one h1 {
+    font-size: 3rem;
+  }
+}
